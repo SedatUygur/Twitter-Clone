@@ -15,6 +15,15 @@ routes:
     else:
       resp renderMain(renderLogin())
 
+  get "/@name":
+    cond '.' notin @"name"
+    var user: User
+    if not db.findUser(@"name", user):
+      halt "User not found"
+
+    let messages = db.findMessages(@[user.username])
+    resp renderMain(renderUser(user) & renderMessages(messages))
+
   post "/login":
     setCookie("username", @"username", getTime().getGMTime() + 2.hours)
     redirect("/")
