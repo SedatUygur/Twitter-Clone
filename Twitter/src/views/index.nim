@@ -26,7 +26,7 @@
 #  result = ""
 <div id="login">
   <span>Login</span>
-  <span class="small">Please type in your username...</span>
+  <span class="small">Please type username</span>
   <form action="login" method="post">
     <input type="text" name="username">
     <input type="submit" value="Login">
