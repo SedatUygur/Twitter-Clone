@@ -16,6 +16,35 @@ proc newDatabase*(filename = "twitter.db"): Database =
   new result
   result.db = open(filename, "", "", "")
 
+proc close*(database: Database) =         
+ database.db.close()
+
+proc setup*(database: Database) =         
+  database.db.exec(sql"""
+    CREATE TABLE IF NOT EXISTS User(
+      username text PRIMARY KEY
+    );
+  """)
+
+  database.db.exec(sql"""
+    CREATE TABLE IF NOT EXISTS Following(
+      follower text,
+      followed_user text,
+      PRIMARY KEY (follower, followed_user),
+      FOREIGN KEY (follower) REFERENCES User(username),
+      FOREIGN KEY (followed_user) REFERENCES User(username)
+    );
+  """)
+
+  database.db.exec(sql"""
+    CREATE TABLE IF NOT EXISTS Message(
+      username text,
+      time integer,
+      msg text NOT NULL,
+      FOREIGN KEY (username) REFERENCES User(username)
+    );
+  """)
+
 proc post*(database: Database, message: Message) =
   if message.msg.len > 140:                                                
     raise newException(ValueError, "Message has to be less than 140 characters.")
