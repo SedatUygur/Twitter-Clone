@@ -30,17 +30,17 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h3 align="center">Attendance Management System</h3>
+  <h3 align="center">Twitter Clone App</h3>
 
   <p align="center">
-    Attendance Management System using Face Recognition!
+    Twitter Clone App using Nim!
     <br />
-    <a href="https://github.com/SedatUygur/Attendance-Management-System"><strong>Explore the docs</strong></a>
+    <a href="https://github.com/SedatUygur/Twitter-Clone"><strong>Explore the docs</strong></a>
     <br />
     <br />
-    <a href="https://github.com/SedatUygur/Attendance-Management-System/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/SedatUygur/Twitter-Clone/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
-    <a href="https://github.com/SedatUygur/Attendance-Management-System/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/SedatUygur/Twitter-Clone/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
