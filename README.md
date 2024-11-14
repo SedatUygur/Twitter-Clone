@@ -30,10 +30,10 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h3 align="center">Twitter Clone App</h3>
+  <h3 align="center">Twitter Clone Project</h3>
 
   <p align="center">
-    Twitter Clone App using Nim!
+    Twitter Clone Project using Nim!
     <br />
     <a href="https://github.com/SedatUygur/Twitter-Clone"><strong>Explore the docs</strong></a>
     <br />
@@ -194,10 +194,10 @@ Project Link: [https://github.com/SedatUygur/Twitter-Clone](https://github.com/S
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-* [nim-logo][Nim]
-* [nimble-logo][Nimble]
-* [jester-logo][Jester]
-* [sqlite-logo][SQLite]
+* [Nim]
+* [Nimble]
+* [Jester]
+* [SQLite]
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
