@@ -34,6 +34,16 @@ routes:
     else:
       resp renderMain(renderUser(user) & renderMessages(messages))
 
+  post "/follow":
+    var follower: User
+    var target: User
+    if not db.findUser(@"follower", follower):         
+      halt "Follower not found"                        
+    if not db.findUser(@"target", target):             
+      halt "Follow target not found"                   
+    db.follow(follower, target)                        
+    redirect(uri("/" & @"target"))                     
+
   post "/login":
     setCookie("username", @"username", getTime().getGMTime() + 2.hours)
     redirect("/")
